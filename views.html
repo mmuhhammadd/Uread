@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script defer src="https://pro.fontawesome.com/releases/v5.10.0/js/all.js" integrity="sha384-G/ZR3ntz68JZrH4pfPJyRbjW+c0+ojii5f+GYiYwldYU69A+Ejat6yIfLSxljXxD" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+      </head>
+    <body>
+        <div id="welcome" class="w-100 vh-100">
+            <div class="container-fluid h-100">
+                <div class="row h-100 align-items-center justify-content-between">
+                    <div class="col col-12 col-lg-6">
+                        <div class="jumbotron jumbotron-fluid bg-transparent">
+                            <div class="container">
+                              <h1 class="display-4">Uread</h1>
+                              <p class="lead">“One glance at a book and you hear the voice of another person, perhaps someone dead for 1,000 years. To read is to voyage through time.” – Carl Sagan</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
+                        <div class="w-75 border border-info mb-3" id="form">
+                        <ul class="nav nav-pills mb-3 justify-content-evenly" id="pills-tab" role="tablist">
+                            <li class="nav-item w-50 text-center border-0 border-right-1 border-left-0 border-top-0 border-bottom-0">
+                              <a class="nav-link active rounded-sm" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">SignIn</a>
+                            </li>
+                            <li class="nav-item w-50 text-center">
+                              <a class="nav-link rounded-sm" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">SignUp</a>
+                            </li>
+                          </ul>
+                          <div class="tab-content p-4" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                              <form>
+                                <div class="alert alert-success alert-dismissible fade show" hidden role="alert">
+                                  Signed up successfully!
+                                  <button type="button" class="close bg-transparent" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>  
+                                <input class="form-control rounded-sm py-3 mb-4" type="text" id="signinuser" required placeholder="Username">
+                                  <input class="form-control rounded-sm py-3 mb-4" type="password" id="signinpass" required placeholder="Password">
+                                  <button class="btn btn-dark w-100 rounded-sm" id="signinsubmit"  type="submit">SignIn</button>
+                                </form>
+                                <div class="pl-2 mt-4">
+                                  <!-- Button trigger modal -->
+                                  <div class="text-center">
+                                  <a class="text-light" id="forgot" href="#" data-toggle="modal" data-target="#exampleModalScrollable">
+                                    Forgot Password?
+                                  </a>
+                                </div>
+                                  <!-- Modal -->
+                                  <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                      <div class="modal-content rounded-sm">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalScrollableTitle">Reset password</h5>
+                                          <button type="button" class="close bg-transparent" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <div class="alert alert-info alert-dismissible fade show" hidden role="alert">
+                                            Password updated successfully!
+                                            <button type="button" class="close bg-transparent" data-dismiss="alert" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <input type="text" disabled class="form-control rounded-sm" id="secuquest">
+                                          <small id="textHelpBlock" class="form-text text-muted mb-3 pl-1">
+                                            Your security question.
+                                        </small>
+                                          <input type="text" class="form-control rounded-sm" id="secuansw" required>
+                                          <small id="textHelpBlock" class="form-text text-muted mb-3 pl-1">
+                                            Your security question answer.
+                                        </small>
+                                          <div id="resetpass" hidden>
+                                          <input type="password"  class="form-control rounded-sm"  placeholder="New password" required>
+                                          <small id="textHelpBlock" class="form-text text-muted mb-3 pl-1">
+                                            Your password must be 8-20 characters long.
+                                        </small>
+                                      </div>
+                                        <div id="resetrepass" hidden>
+                                          <input type="password" class="form-control rounded-sm" placeholder="Repassword" required>
+                                          <small id="textHelpBlock" class="form-text text-muted mb-3 pl-1">
+                                            Your passwords must match.
+                                          </small>
+                                          </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary rounded-sm" data-dismiss="modal">Close</button>
+                                          <button type="button" id="savereset" disabled class="btn btn-dark rounded-sm">Save changes</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+                                
+                            <form class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                <input class="form-control rounded-sm" id="usernamefield" type="text" required placeholder="Username">
+                                <small id="textHelpBlock" class="form-text text-muted mb-3 pl-1">
+                                    Your username must be 8-20 characters long, contains only letters.
+                                </small>
+                                <input class="form-control rounded-sm" id="passwordfield" type="password" required placeholder="Password">
+                                <small id="textHelpBlock" class="form-text text-muted mb-3 pl-1">
+                                    Your password must be 8-20 characters long.
+                                </small>
+                                <input class="form-control rounded-sm" id="repasswordfield" type="password" required placeholder="Repassword">
+                                <small id="textHelpBlock" class="form-text text-muted mb-3 pl-1 ">
+                                    Your passwords must match.
+                                </small>
+                                <div class="form-group mb-3">
+                                  <select class="custom-select rounded-sm text-muted" id="securityquestion" style="font-weight: 400;" required>
+                                    <option style="font-weight: 400;" disabled selected value="null">Security Question</option>
+                                    <option style="font-weight: 400;" value="Your nickname?">Your nickname?</option>
+                                    <option style="font-weight: 400;" value="Your pet name?">Your pet name?</option>
+                                    <option style="font-weight: 400;" value="Your best friend name?">Your best friend name?</option>
+                                  </select>
+                                  <small id="textHelpBlock" class="form-text text-muted pl-1">
+                                    Choose a security question.
+                                </small>
+                                </div>
+                                <input class="form-control rounded-sm mb-3" hidden id="answerfield" type="text" required placeholder="Question answer">
+                                <button class="btn btn-dark w-100 rounded-sm" id="signupsubmit" type="submit">SignUp</button>
+                            </form>                  
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="home">
+          <nav class="navbar navbar-expand-lg navbar-light pt-5" id="nav1">
+            <a class="navbar-brand align-top" href="#">Uread</a>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" id="logout" href="">LogOut</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav2">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="">Home</a>
+                </li>
+                <li class="nav-item">
+                    <!-- Button trigger modal -->
+                    <a id="create" href="#" class="nav-link align-bottom" data-toggle="modal" data-target="#exampleModal">
+                      Create
+                    </a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content bg-light rounded-sm">
+                          <div class="modal-header">
+                            <h5 class="modal-title font-weight-lighter" id="exampleModalLabel">Add Book</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form class="form-group" id="add">
+                            <input type="text" value="" class="form-control m-1 rounded-sm" required id="title" placeholder="Title">
+                            <input type="text" value="" class="form-control m-1 rounded-sm" required id="author" placeholder="Author">
+                            <input type="text" value="" class="form-control m-1 rounded-sm" required id="year" placeholder="Year">
+                            <input type="text" value="" class="form-control m-1 rounded-sm" required id="cover" placeholder="Image link">
+                          </form>
+                          </div>
+                          <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-secondary rounded-sm" data-dismiss="modal">Close</button>
+                            <button type="button" id="trigger" disabled class="btn btn-dark rounded-sm" data-dismiss="modal">Add Book</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+              </ul>
+              <form id="search" class="form-inline my-2 my-lg-0">
+                <input id="query" class="form-control mr-sm-2 rounded-sm bg-transparent border-dark" required type="search" placeholder="Search Books" aria-label="Search">
+                <button class="btn btn-dark my-2 my-sm-0 rounded-sm" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+          <div class="table-responsive pt-5">
+            <table class="table mx-auto table-borderless table-hover">
+              <thead class="">
+                <tr> 
+                  <th scope="col">TITLE</th>
+                  <th scope="col">AUTHOR</th>
+                  <th scope="col">YEAR</th>
+                  <th scope="col">COVER</th>
+                  <th scope="col">OPTIONS</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        </body>
+</html>

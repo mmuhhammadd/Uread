@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+}
+#welcome, #welcome .col {
+    background-image: url('bgimage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+* {
+    font-family: 'Noto Sans KR', sans-serif !important;
+    font-weight: 700;
+}
+.form-text {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100;
+}
+.nav-pills a.nav-link {
+    background-color: #353b48;
+    color: white;
+    font-size: 1.3em;
+}
+.nav-pills a.active {
+    background-color:  #2f3640 !important;
+    color: white !important;
+    border: none !important;
+}
+#form {
+    background-color:  #2f3640;
+    box-shadow: 1px 1px 14px 1px #353b48;
+}
+#pills-profile button, #pills-home button {
+    background-color: #353b48;
+    border: none;
+}
+
+.jumbotron {
+    color: #2f3640;
+}
+#home {
+    background-color: #353b48;
+    height: 100vh;
+}
+#nav1 .navbar-brand {
+    font-size: 4em !important;
+    color: #f5f6fa !important;
+}
+#nav1 .nav-link {
+    color: #f5f6fa !important;
+}
+#nav2 {
+    background-color: #f5f6fa !important;
+}
+#nav2 .nav-link {
+    font-weight: 300 !important;
+}
+table input{
+    text-align: center !important;
+    border-radius: 0% !important;
+    background-color: inherit !important;
+    color: #f5f6fa !important;
+    border: .5px solid  #f5f6fa !important;
+}
+.table-responsive {
+    background-color: #353b48 !important;
+}
+
+table input[disabled] {
+    border: none !important;
+    text-align: center !important;
+    background-color: transparent !important;
+    color: #f5f6fa !important;
+    font-weight: 100 !important;
+    width: fit-content !important;
+}
+table img {
+    height: 40%;
+}
+table th {
+    padding: 20px 0px !important;
+    text-align: center !important;
+    color: #f5f6fa;
+    font-weight: 700 !important;
+    background-color:  #2f3640;
+    border: 3px solid #353b48 !important;
+}
+table td {
+    text-align: center !important;
+}
+table button {
+    font-weight: 100 !important;
+    background-color: transparent !important;
+    border: none !important
+}
+table {
+    text-align: center !important;
+    width: 95% !important;
+}
+button#edit:hover, .fa-pen:hover {
+    color: white !important;
+}
+button#save:hover, .fa-save:hover {
+    color: white;
+}
+
+#forgot {
+    font-weight: 100 !important;
+}
+#forgot:hover {
+    text-decoration: none;
+}
+#securityquestion option {
+    font-weight: 100 !important;
+}
+select#securityquestion {
+    width: 100% !important;
+}
+#pills-home label {
+    font-weight: 300 !important;
+}
+#pills-home input {
+    font-weight: 100 !important;
+}
+#pills-profile input {
+    font-weight: 100 !important;
+}
+#pills-profile select {
+    font-weight: 100 !important;
+}
+.spinner-grow{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+}

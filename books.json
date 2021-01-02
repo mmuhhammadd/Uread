@@ -1,0 +1,25 @@
+{ "1": {
+        "title": "The Midnight Library",
+        "author": "Matt Haig",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1602190253l/52578297.jpg",
+        "date": "2020"
+    },
+    "2": {
+        "title": "The Guest List",
+        "author": "Lucy Foley",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1597345150l/54911607._SY475_.jpg",
+        "date": "2020"
+    },
+    "3": {
+        "title": "The Vanishing Half",
+        "author": "Brit Bennett",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1577090827l/51791252._SX318_SY475_.jpg",
+        "date": "2020"
+    },
+    "4": {
+        "title": "Strange Planet",
+        "author": "Nathan W. Pyle",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1556745170l/44890112._SX318_.jpg",
+        "date": "2020"
+    }
+}
